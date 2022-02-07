@@ -15,6 +15,6 @@ public class EventRegistrationBackendApplication {
     
     @GetMapping("/")
     public String greeting(){
-        return "Hello world!";
+        return "Hello world from github actions";
     }
 }
