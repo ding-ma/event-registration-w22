@@ -1,13 +1,14 @@
 package ca.mcgill.ecse321.eventregistration.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-@Data
 public class Registration {
     @Id
     private int id;
@@ -17,4 +18,28 @@ public class Registration {
     
     @ManyToOne(optional = false)
     private Event event;
+    
+    public int getId() {
+        return id;
+    }
+    
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    public Person getPerson() {
+        return person;
+    }
+    
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+    
+    public Event getEvent() {
+        return event;
+    }
+    
+    public void setEvent(Event event) {
+        this.event = event;
+    }
 }

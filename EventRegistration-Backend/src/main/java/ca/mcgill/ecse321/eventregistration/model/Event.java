@@ -1,5 +1,9 @@
 package ca.mcgill.ecse321.eventregistration.model;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.sql.Date;
@@ -7,41 +11,44 @@ import java.sql.Time;
 
 @Entity
 public class Event {
+    @Id
     private String name;
     private Date date;
     private Time startTime;
     private Time endTime;
     
-    @Id
+    
     public String getName() {
-        return this.name;
+        return name;
     }
     
-    public void setName(String value) {
-        this.name = value;
+    public void setName(String name) {
+        this.name = name;
     }
     
     public Date getDate() {
-        return this.date;
+        return date;
     }
     
-    public void setDate(Date value) {
-        this.date = value;
+    public void setDate(Date date) {
+        this.date = date;
     }
     
     public Time getStartTime() {
-        return this.startTime;
+        return startTime;
     }
     
-    public void setStartTime(Time value) {
-        this.startTime = value;
+    public void setStartTime(Time startTime) {
+        this.startTime = startTime;
     }
     
     public Time getEndTime() {
-        return this.endTime;
+        return endTime;
     }
     
-    public void setEndTime(Time value) {
-        this.endTime = value;
+    public void setEndTime(Time endTime) {
+        this.endTime = endTime;
     }
 }
+
+
