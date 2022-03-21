@@ -34,6 +34,7 @@ public class EventRegistrationRestController {
     
     @PostMapping(value = { "/persons/{name}", "/persons/{name}/" })
     public PersonDto createPerson(@PathVariable("name") String name) throws IllegalArgumentException {
+        System.out.println("Create Person called "+ name );
         Person person = service.createPerson(name);
         return convertToDto(person);
     }

@@ -20,7 +20,7 @@ module.exports = {
     // `npm run build --report`
     // Set to `true` or `false` to always turn it on or off
     bundleAnalyzerReport: process.env.npm_config_report,
-    host: 'eventregistration-frontend-123.herokuapp.com', // TODO when the heroku project is created
+    host: 'event-registration-fe.herokuapp.com',
     port: 443,
     backendHost: 'event-registration-be.herokuapp.com',
     backendPort: 443,
